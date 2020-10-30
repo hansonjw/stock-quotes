@@ -6,6 +6,7 @@
   The primary goals are for users to;
   - generate and post an Investment Thesis on individual stocks
   - collaborate and engage with other users to test the thesis
+  - revise the investment thesis over time as testing plays out and/or new information becomes available
   - raise the general acumen, interest, and knowlegebase of investing in the community
   
   Users can:
