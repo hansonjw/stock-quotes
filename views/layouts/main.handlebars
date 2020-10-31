@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header class="navheader">
+    <h1>
+        <a>Stock Quotes!</a>
+    </h1>
+    <nav>
+      <div class="navitem"><a href="/">Home</a></div>
+      <div class="navitem"><a href="/dashboard">Dashboard</a></div>
+      {{#if loggedIn}}
+      <div class="navitem"><button id="logout" class="btn-no-style">logout</button></div>
+      {{else}}
+      <div class="navitem"><a href="/login">login</a></div>
+      {{/if}}
+    </nav>
+</header>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A place to elevate financial acumen, and the general understanding of wealth</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1  class="subhead">
+        {{#if loggedIn}}
+          <a class="welcome">Welcome!</a>
+        {{else}}
+          <a>"Thesis: a position or proposition that a person advances and offers to maintain by argument"</a>
+        {{/if}}
+      </h1>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      ...created by group 5
+    </footer>
+  </div>
+    
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>

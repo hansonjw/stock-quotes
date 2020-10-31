@@ -1,0 +1,16 @@
+<ul class="post-list">
+  {{#each theses as |thesis|}}
+  <li>
+    <article class="post">
+      {{!-- <div class="title"></div> --}}
+      <a href="/api/thesis/{{thesis.id}}">{{thesis.title}}</a>
+      <div class="meta">
+        Posted by {{thesis.user.username}} on
+        {{thesis.security_id}}
+        |
+        {{thesis.comments.length}} comment(s)
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ol>
