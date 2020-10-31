@@ -2,13 +2,23 @@
   {{#each theses as |thesis|}}
   <li>
     <article class="post">
-      {{!-- <div class="title"></div> --}}
-      <a href="/api/thesis/{{thesis.id}}">{{thesis.title}}</a>
-      <div class="meta">
-        Posted by {{thesis.user.username}} on
-        {{thesis.security_id}}
-        |
-        {{thesis.comments.length}} comment(s)
+      <div class="container">
+        <div class="row">
+          <div class="col-9">
+            <a href="/api/thesis/{{thesis.id}}">{{thesis.title}}</a>
+            <div class="meta">Posted by
+              <a href="/api/user/{{thesis.user.id}}">{{thesis.user.username}}</a>
+              on {{format_date post.createdAt}}
+            </div>
+            <div>{{thesis.comments.length}} comment(s)</div>
+          </div>
+          <div class="col-3">
+              <a href="/api/security/{{thesis.security_id}}">
+                <h2 class="ticker">{{thesis.security_id}}</h2>
+              </a>
+            <a>{{thesis.security.name}}</a>
+          </div>
+        </div>
       </div>
     </article>
   </li>

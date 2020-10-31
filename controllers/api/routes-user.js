@@ -19,13 +19,12 @@ router.get('/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'username',
-            'password'
+            'username'
         ],
     include: [
         {
             model: Thesis,
-            attributes: [ 'id', 'ticker', 'title']
+            attributes: [ 'id', 'security_id', 'title']
         },
         {
             model: Comment,
