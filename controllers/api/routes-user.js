@@ -48,5 +48,8 @@ router.get('/:id', (req, res) => {
 })
 
 
+// need a create user route...integrate with session
+
+
 
 module.exports = router;
