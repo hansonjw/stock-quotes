@@ -28,7 +28,7 @@ Thesis.init(
           key: 'id'
         }
       },
-      ticker: {
+      security_id: {
           type: DataTypes.STRING,
           references:{
             model: 'security',
