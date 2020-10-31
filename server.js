@@ -3,18 +3,16 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const path = require('path');
 const exphbs = require('express-handlebars');
-
 const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
-
-const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// I don't fully understand this cookie stuff...
 const sess = {
     secret: 'Super duper secret',
     cookie: {},

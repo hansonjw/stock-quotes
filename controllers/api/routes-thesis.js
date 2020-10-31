@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['id', 'username', 'email']
+                attributes: ['id', 'username']
             },
             {
                 model: Security,
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['id', 'username', 'email']
+                attributes: ['id', 'username']
             },
             {
                 model: Comment,
