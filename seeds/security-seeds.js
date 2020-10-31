@@ -2,22 +2,28 @@ const { Security } = require('../models');
 
 const securityData = [
     {
-        ticker: 'TSLA'
+        ticker: 'TSLA',
+        name: 'Tesla'
     },
     {
-        ticker: 'AAPL'
+        ticker: 'AAPL',
+        name: 'Apple'
     },
     {
-        ticker: 'BRKA'
+        ticker: 'BRKA',
+        name: 'Berkshire Hathaway'
     },
     {
-        ticker: 'PLTR'
+        ticker: 'PLTR',
+        name: 'Palantir'
     },
     {
-        ticker: 'JPM'
+        ticker: 'JPM',
+        name: 'JP Morgan Chase'
     },
     {
-        ticker: 'SNOW'
+        ticker: 'SNOW',
+        name: 'Snowflake'
     }
 ];
 
