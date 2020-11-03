@@ -1,0 +1,23 @@
+{{!-- passing in some kind of object...a 'thesis' object... --}}
+{{!-- remember to use the names of the models...lowercase and singular --}}
+
+
+<img src="/public/dummy.png">
+
+<article class="thesis">
+  <div class="thesis_title">
+    <a href="/api/security/{{thesis.security_id}}">{{thesis.security_id}}</a>
+    {{thesis.title}}
+  </div>
+  <div>
+    <a class="thesis_text">{{thesis.thesis_text}}</a>
+  </div>
+  <div class="meta">
+    Posted by {{thesis.user.username}} on {{format_date thesis.created_at}}
+    |
+    <a>{{thesis.comments.length}} comment(s)</a>
+  </div>
+
+  {{> comments thesis.comments}}
+
+</article>
