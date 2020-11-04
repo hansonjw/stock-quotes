@@ -58,6 +58,7 @@ button:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
 }
 
 .thesis_text {
@@ -184,6 +185,7 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+  border-radius: 10px;
 }
 
 .comment:nth-child(odd) {
@@ -228,7 +230,9 @@ footer {
   display: inline;
 }
 
-.img-chart {
-  background-image: url("./public/dummy.png");
-  background-size: 300%;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row">
           <div class="col-3">
-            <a href="/api/security/{{thesis.security_id}}">
+            <a href="/security/{{thesis.security_id}}">
                 <h2 class="ticker">{{thesis.security_id}}</h2>
             </a>
             <a>{{thesis.security.name}}</a>
@@ -15,13 +15,11 @@
             <div>{{thesis.comments.length}} comment(s)</div>
           </div>
           <div class="col-3">
-              <div class="meta">
+            <div class="meta">
               <a href="/api/user/{{thesis.user.id}}">{{thesis.user.username}}</a>
-              <div>{format_date post.createdAt}}</div>
+              <div>{format_date thesis.createdAt}}</div>
             </div>
-
           </div>
-
         </div>
       </div>
     </article>
