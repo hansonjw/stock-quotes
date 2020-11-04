@@ -1,0 +1,15 @@
+{{!-- passing in some kind of object...a 'thesis' object... --}}
+{{!-- remember to use the names of the models...lowercase and singular --}}
+
+
+<img class="image" src="/dummy.png">
+
+<article class="thesis">
+  <div class="thesis_title">
+    <a href="/security/{{security.ticker}}">{{security.ticker}}</a>
+    <div>{{security.name}}</div>
+  </div>
+
+  {{> thesis security.theses}}
+
+</article>

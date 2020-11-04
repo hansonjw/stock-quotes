@@ -90,7 +90,101 @@ router.get('/thesis/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     })
-})
+});
+
+router.get('/security/:id', (req, res) => {
+    Security.findOne({
+        where: { ticker: req.params.id},
+        attributes: [
+            'ticker',
+            'name'
+        ],
+        include: [
+            {
+                model: Thesis,
+                attributes: [
+                    'id',
+                    'title',
+                    'thesis_text',
+                    'user_id',
+                    'security_id'
+                ],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
+    .then(dbSecurityData => {
+        if(!dbSecurityData) {
+            res.status(404).jason({message: 'No Security found with this ID'});
+            return;
+        }
+
+        // serialize the data - what does this mean?
+        const security = dbSecurityData.get({ plain: true });
+        console.log(security);
+
+        // pass data to handlebars template
+
+        res.render('aSecurity', {
+            security
+            // loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
+
+
+
+router.get('/newthesis', (req, res) => {
+    User.findOne({
+        where: {
+            // id: req.session.user_id
+            id: 3
+        },
+        attributes: [
+            'id',
+            'username'
+        ],
+    include: [
+        {
+            model: Thesis,
+            attributes: [ 'id', 'security_id', 'title'],
+            include: [{
+                model: Security,
+                attributes: ['ticker', 'name']
+            }]
+        },
+        {
+            model: Comment,
+            attributes: ['id', 'thesis_id', 'comment_text']
+        }
+    ]
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({message: "No user found with that ID"});
+            return;
+        }
+        // serialize the data - what does this mean?
+        const user = dbUserData.get({ plain: true });
+        console.log(user);
+        res.render('newThesis', {user});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
+
+
+
+
 
 
 module.exports = router;
