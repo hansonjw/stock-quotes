@@ -7,8 +7,8 @@
     </h1>
     <nav>
       <div class="navitem"><a href="/">All Ideas</a></div>
-      <div class="navitem"><a href="/newthesis">New Idea</a></div>
       {{#if loggedIn}}
+      <div class="navitem"><a href="/newthesis">New Idea</a></div>
       <div class="navitem"><button id="logout" class="btn-no-style">logout</button></div>
       {{else}}
       <div class="navitem"><a href="/login">login</a></div>
@@ -33,10 +33,10 @@
       ...created by group 5
     </footer>
   </div>
-    
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
