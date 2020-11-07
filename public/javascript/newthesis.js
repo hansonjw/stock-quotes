@@ -23,5 +23,7 @@ async function newFormHandler(event) {
       alert(response.statusText);
     }
 }
-  
+
+
+
 document.querySelector('.new-thesis').addEventListener('submit', newFormHandler);

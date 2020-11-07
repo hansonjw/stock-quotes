@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Thesis,
-                attributes: ['title', 'user_id']
+                attributes: ['title', 'user_id', 'createdAt']
             }
         ]
     })

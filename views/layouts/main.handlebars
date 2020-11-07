@@ -3,10 +3,10 @@
 
 <header class="navheader">
     <h1>
-        <a>Stock Quotes!</a>
+        <a>Investment Ideas!</a>
     </h1>
     <nav>
-      <div class="navitem"><a href="/">Home</a></div>
+      <div class="navitem"><a href="/">All Ideas</a></div>
       <div class="navitem"><a href="/newthesis">New Idea</a></div>
       {{#if loggedIn}}
       <div class="navitem"><button id="logout" class="btn-no-style">logout</button></div>
@@ -26,15 +26,6 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <h1  class="subhead">
-        {{#if loggedIn}}
-          <a class="welcome">Welcome!</a>
-        {{else}}
-          <a>"Thesis: a position or proposition that a person advances and offers to maintain by argument"</a>
-        {{/if}}
-      </h1>
-    </header>
     <main>
       {{{ body }}}
     </main>
