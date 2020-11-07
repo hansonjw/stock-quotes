@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'user_id', 'thesis_id', 'comment_text']
+                attributes: ['id', 'user_id', 'thesis_id', 'comment_text', 'comment_opinion']
             },
             {
                 model: User,
@@ -67,7 +67,7 @@ router.get('/thesis/:id', (req, res) => {
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'thesis_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'comment_opinion', 'thesis_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                 attributes: ['username']
@@ -178,7 +178,7 @@ router.get('/newthesis', (req, res) => {
         },
         {
             model: Comment,
-            attributes: ['id', 'thesis_id', 'comment_text']
+            attributes: ['id', 'thesis_id', 'comment_text', 'comment_opinion']
         }
     ]
     })
