@@ -26,8 +26,13 @@ Comment.init(
             key: 'id'
             }
     },
-    comment_text: {
+    comment_opinion:{
         type: DataTypes.STRING,
+        allowNull: false,
+        isIn: [['support', 'oppose', 'neutral']]
+    },
+    comment_text: {
+        type: DataTypes.TEXT,
         allowNull: true,
     }
   },
