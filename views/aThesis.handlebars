@@ -1,19 +1,22 @@
-{{!-- passing in some kind of object...a 'thesis' object... --}}
-{{!-- remember to use the names of the models...lowercase and singular --}}
-
+<a href="/security/{{thesis.security_id}}">{{thesis.security_id}}</a>
 
 <img src="/dummy.png">
 
 <article class="thesis">
-  <div class="thesis_title">
-    <a href="/security/{{thesis.security_id}}">{{thesis.security_id}}</a>
-    {{thesis.title}}
+  <div class="row">
+    <div class="col-9">
+      <h3 class="thesis_title">
+        {{thesis.title}}
+      </h3>
+    </div>
+    <div class="col-3">
+      <div class="meta">
+        Posted by {{thesis.user.username}} on {{format_date thesis.createdAt}} | <a>{{thesis.comments.length}} comment(s)</a>
+      </div>
+    </div>
   </div>
-  <div>
-    <a class="thesis_text">{{thesis.thesis_text}}</a>
-  </div>
-  <div class="meta">
-    Posted by {{thesis.user.username}} on {{format_date thesis.createdAt}} | <a>{{thesis.comments.length}} comment(s)</a>
+  <div class="thesis_text">
+    {{thesis.thesis_text}}
   </div>
 </article>
 
@@ -21,21 +24,27 @@
   <form class="comment-form">
     <div class="container">
       <div class="row">
-        <a>Add a comment and contribute to the body of knowledge...</a>
+      Add a comment and contribute to the body of knowledge and research...
       </div>
 
       <div class="row">
         <div class="col-9">
           <textarea id="comment-text" name="comment-text"></textarea>
         </div>
-        <div class="col-3">
-          <label for="comment-opinion">Opinion of Thesis:</label>
-          <select id="comment-opinion" name="comment-opinion">
-            <option value="support">Support</option>
-            <option value="oppose">Oppose</option>
-            <option value="neutral">Neutral</option>
-          </select>
-          <button type="submit">Add Comment</button>
+        <div class="col-3 meta">
+          <div class="row">
+            <label class="meta" for="comment-opinion">Opinion of Thesis:</label>
+          </div>
+          <div class="row">
+            <select id="comment-opinion" name="comment-opinion" required>
+              <option value="neutral">Neutral</option>
+              <option value="support">Support</option>
+              <option value="oppose">Oppose</option>
+            </select>
+          </div>
+          <div class="row"> 
+            <button type="submit">Add Comment</button>
+          </div>
         </div>
       </div>
     </div>
