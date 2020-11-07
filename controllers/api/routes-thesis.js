@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
             'id',
             'title',
             'user_id',
-            'security_id'
+            'security_id',
+            'createdAt'
         ],
         include: [
             {
@@ -42,7 +43,8 @@ router.get('/:id', (req, res) => {
             'title',
             'thesis_text',
             'user_id',
-            'security_id'
+            'security_id',
+            'createdAt'
         ],
         include: [
             {

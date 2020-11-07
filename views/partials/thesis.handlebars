@@ -1,13 +1,13 @@
 <div class="comments">
   {{#each this}}
   <div class="container">
-    <div class="row comment">
+    <div class="row post">
       <div class="col-9 text">
         <a href="/thesis/{{id}}">{{title}}</a>
       </div>
       <div class="col-3 meta">
         <div>{{user.username}}</div>
-        <div>{{format_date created_at}}</div>
+        <div>{{format_date createdAt}}</div>
       </div>
     </div>
   </div>

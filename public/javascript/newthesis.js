@@ -18,10 +18,12 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/security/:security_id');
+      document.location.replace('/security/'+security_id);
     } else {
       alert(response.statusText);
     }
 }
-  
+
+
+
 document.querySelector('.new-thesis').addEventListener('submit', newFormHandler);

@@ -24,9 +24,9 @@ section {
   border-radius: 10px;
 }
 
-a:hover {
+/* a:hover {
   color: #1a0000;
-}
+} */
 
 a:visited {
   color: #1a0000;
@@ -124,6 +124,7 @@ main {
   flex: 1;
   padding: 2% 4%;
 }
+
 
 .btn-no-style {
   background: none;

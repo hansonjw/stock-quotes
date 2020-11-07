@@ -3,7 +3,19 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { User, Thesis, Security, Comment } = require('../models');
 
+// route if user is not logged in...
+router.get('/login', (req, res) => {
+    // if user is logged in redirect to main page
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+    // ...otherwise take then to the login page
+    res.render('login');
+});
 
+
+// route for 'getting' all Thesis's and rendering on the page
 router.get('/', (req, res) => {
     Thesis.findAll({
         attributes: [
@@ -11,7 +23,8 @@ router.get('/', (req, res) => {
             'title',
             'thesis_text',
             'user_id',
-            'security_id'
+            'security_id',
+            'createdAt'
         ],
         include: [
             {
@@ -41,14 +54,15 @@ router.get('/', (req, res) => {
     });
 });
 
-
+// route for getting a particular Thesis and rendering
 router.get('/thesis/:id', (req, res) => {
     Thesis.findOne({
         where: { id: req.params.id},
         attributes: [
             'title',
             'thesis_text',
-            'security_id'
+            'security_id',
+            'createdAt'
         ],
         include: [
             {
@@ -92,6 +106,7 @@ router.get('/thesis/:id', (req, res) => {
     })
 });
 
+// route for getting a particular thesis and rendering on the page
 router.get('/security/:id', (req, res) => {
     Security.findOne({
         where: { ticker: req.params.id},
@@ -107,7 +122,8 @@ router.get('/security/:id', (req, res) => {
                     'title',
                     'thesis_text',
                     'user_id',
-                    'security_id'
+                    'security_id',
+                    'createdAt'
                 ],
                 include: {
                     model: User,
@@ -140,7 +156,7 @@ router.get('/security/:id', (req, res) => {
 });
 
 
-
+// render page for entering a new thesis...
 router.get('/newthesis', (req, res) => {
     User.findOne({
         where: {
@@ -182,7 +198,7 @@ router.get('/newthesis', (req, res) => {
     })
 });
 
-
+// route 
 
 
 
