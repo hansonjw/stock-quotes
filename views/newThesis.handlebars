@@ -1,0 +1,34 @@
+<section>
+  <h2>New Investment Thesis</h2>
+
+  <form class="new-thesis">
+    <div>
+      <label for="thesis-title">Title</label>
+      <input type="text" id="thesis-title" name="thesis-title" />
+    </div>
+    <div>
+      <label for="thesis-security">Security</label>
+      <input type="text" id="thesis-security" name="thesis-security" />
+    </div>
+    <div>
+      <label for="thesis-contents">Investment idea...</label>
+      <textarea id="thesis-contents" name="thesis-contents" /></textarea>
+    </div>
+    <button type="submit">Create</button>
+  </form>
+</section>
+
+{{#if user.theses.length}}
+<section>
+  <h2>Your Theses</h2>
+  <ul>
+    {{#each user.thesis as |thesis|}}
+    <li>
+      {{> thesis thesis}}
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{/if}}
+
+<script src="/javascript/newthesis.js"></script>

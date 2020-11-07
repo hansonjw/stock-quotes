@@ -1,0 +1,49 @@
+{{!-- passing in some kind of object...a 'thesis' object... --}}
+{{!-- remember to use the names of the models...lowercase and singular --}}
+
+
+<img src="/dummy.png">
+
+<article class="thesis">
+  <div class="thesis_title">
+    <a href="/security/{{thesis.security_id}}">{{thesis.security_id}}</a>
+    {{thesis.title}}
+  </div>
+  <div>
+    <a class="thesis_text">{{thesis.thesis_text}}</a>
+  </div>
+  <div class="meta">
+    Posted by {{thesis.user.username}} on {{format_date thesis.createdAt}} | <a>{{thesis.comments.length}} comment(s)</a>
+  </div>
+</article>
+
+{{#if loggedIn}}
+  <form class="comment-form">
+    <div class="container">
+      <div class="row">
+        <a>Add a comment and contribute to the body of knowledge...</a>
+      </div>
+
+      <div class="row">
+        <div class="col-9">
+          <textarea id="comment-text" name="comment-text"></textarea>
+        </div>
+        <div class="col-3">
+          <label for="comment-opinion">Opinion of Thesis:</label>
+          <select id="comment-opinion" name="comment-opinion">
+            <option value="support">Support</option>
+            <option value="oppose">Oppose</option>
+            <option value="neutral">Neutral</option>
+          </select>
+          <button type="submit">Add Comment</button>
+        </div>
+      </div>
+    </div>
+  </form>
+{{/if}}
+
+
+{{> comments thesis.comments}}
+
+
+<script src="/javascript/newcomment.js"></script>

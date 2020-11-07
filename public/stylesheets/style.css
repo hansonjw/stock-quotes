@@ -24,9 +24,9 @@ section {
   border-radius: 10px;
 }
 
-a:hover {
+/* a:hover {
   color: #1a0000;
-}
+} */
 
 a:visited {
   color: #1a0000;
@@ -58,6 +58,11 @@ button:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
+}
+
+.thesis_text {
+  font-weight: normal;
 }
 
 .post-list {
@@ -120,6 +125,7 @@ main {
   padding: 2% 4%;
 }
 
+
 .btn-no-style {
   background: none;
   border: none;
@@ -146,6 +152,10 @@ main {
   background-color: #ff643d;
 }
 
+.thesis_title {
+  color: #ff0000;
+}
+
 .post {
   line-height: 150%;
   background-color: #ff9999;
@@ -154,7 +164,7 @@ main {
   border-radius: 10px;
 }
 
-.post .title span {
+.post span {
   font-style: italic;
   font-size: 90%;
   color: #ff9999
@@ -176,6 +186,7 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+  border-radius: 10px;
 }
 
 .comment:nth-child(odd) {
@@ -218,4 +229,11 @@ footer {
   padding: 10px;
   margin: 20px;
   display: inline;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

@@ -4,19 +4,21 @@
     <article class="post">
       <div class="container">
         <div class="row">
-          <div class="col-9">
-            <a href="/api/thesis/{{thesis.id}}">{{thesis.title}}</a>
-            <div class="meta">Posted by
-              <a href="/api/user/{{thesis.user.id}}">{{thesis.user.username}}</a>
-              on {{format_date post.createdAt}}
-            </div>
+          <div class="col-3">
+            <a href="/security/{{thesis.security_id}}">
+                <h2 class="ticker">{{thesis.security_id}}</h2>
+            </a>
+            <a>{{thesis.security.name}}</a>
+          </div>
+          <div class="col-6">
+            <a href="/thesis/{{thesis.id}}">{{thesis.title}}</a>
             <div>{{thesis.comments.length}} comment(s)</div>
           </div>
           <div class="col-3">
-              <a href="/api/security/{{thesis.security_id}}">
-                <h2 class="ticker">{{thesis.security_id}}</h2>
-              </a>
-            <a>{{thesis.security.name}}</a>
+            <div class="meta">
+              <a href="/api/user/{{thesis.user.id}}">{{thesis.user.username}}</a>
+              <div>{{format_date thesis.createdAt}}</div>
+            </div>
           </div>
         </div>
       </div>
