@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  color: #4d0000;
 }
 
 body, html {
@@ -8,7 +7,6 @@ body, html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #ff0000;
 }
 
 a {
@@ -24,10 +22,6 @@ section {
   border-radius: 10px;
 }
 
-/* a:hover {
-  color: #1a0000;
-} */
-
 a:visited {
   color: #1a0000;
 }
@@ -37,7 +31,7 @@ ul {
 }
 
 button {
-  background-color: #660000;
+  background-color: #333300;
   border: 0;
   padding: 1%;
   color: white;
@@ -48,7 +42,7 @@ button {
 }
 
 button:hover {
-  background-color: #b30000;
+  background-color: #000000;
 }
 
 .subhead {
@@ -61,8 +55,20 @@ button:hover {
   margin-top: 10px;
 }
 
+.thesis {
+  background-color: #cce0ff;
+  padding: 1%;
+  margin-bottom: 1%;
+  border-radius: 10px;
+}
+
+.thesis_title {
+  color: #001f4d;
+}
+
 .thesis_text {
   font-weight: normal;
+  margin: 1%;
 }
 
 .post-list {
@@ -78,16 +84,12 @@ textarea, input {
 
 textarea:focus, input:focus {
   outline: none;
-  border: 1px solid #ff0000;
+  border: 1px solid #999900;
 }
 
 textarea {
-  min-width: 40%;
+  min-width: 100%;
   min-height: 100px;
-}
-
-form > div {
-  margin-bottom: 2%;
 }
 
 form label {
@@ -115,9 +117,9 @@ header h1 {
   font-size: 2em;
 }
 
-.navheader{
-  background-color: #ffe6e6;
-  color: #4d0000;
+.navbar{
+  background-color: #ffffcc;
+  color: #333300;
 }
 
 main {
@@ -152,10 +154,6 @@ main {
   background-color: #ff643d;
 }
 
-.thesis_title {
-  color: #ff0000;
-}
-
 .post {
   line-height: 150%;
   background-color: #ff9999;
@@ -164,55 +162,37 @@ main {
   border-radius: 10px;
 }
 
-.post span {
-  font-style: italic;
-  font-size: 90%;
-  color: #ff9999
-}
 
-.welcome {
-  font-size: 80%;
-}
-
-.edit-link {
-  display: block;
-  margin: -1.5% 0 2% 0;
-}
+/* ############################################### */
+/* Comments Display and Style */
 
 .comment-form {
-  margin-bottom: 5%;
+  background-color: #ffffcc;
+  color: #333300;
+  padding: 1%;
+  margin-bottom: 1%;
+  border-radius: 10px;
 }
 
 .comment {
   padding: 1%;
   margin-bottom: 1%;
   border-radius: 10px;
-}
-
-.comment:nth-child(odd) {
-  background-color: #ffe6e6;
-}
-
-.comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
-}
-
-.blog-contents {
-  font-size: 100%;
+  margin-bottom: 1%;
   font-style: italic;
-  font-weight: normal;
-  margin-bottom: .5%;
-  color: #660000;
 }
 
-.new-post-form input {
-  width: 300px;
+.support{
+  background-color: #ccffdd;
 }
 
-.edit-post-form {
-  margin-bottom: 5%;
+.oppose{
+  background-color: #ffcccc;
+}
+
+.neutral{
+  background-color: #e6e6e6;
 }
 
 footer {
@@ -236,4 +216,41 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* ############################################### */
+/* Not Sure if these are actually used anywhere... */
+
+.new-post-form input {
+  width: 300px;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+}
+
+.blog-contents {
+  font-size: 100%;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: .5%;
+  color: #660000;
+}
+
+.post span {
+  font-style: italic;
+  font-size: 90%;
+  color: #ff9999
+}
+
+.welcome {
+  font-size: 80%;
+}
+
+.edit-link {
+  display: block;
+  margin: -1.5% 0 2% 0;
 }
