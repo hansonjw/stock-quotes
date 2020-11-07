@@ -44,8 +44,8 @@ router.get('/', (req, res) => {
     .then (dbThesisData => {
         const theses = dbThesisData.map(thesis => thesis.get({ plain: true }));
         res.render('homepage', {
-            theses
-            // loggedIn: req.session.loggedIn
+            theses,
+            loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
@@ -96,8 +96,8 @@ router.get('/thesis/:id', (req, res) => {
         // pass data to handlebars template
 
         res.render('aThesis', {
-            thesis
-            // loggedIn: req.session.loggedIn
+            thesis,
+            loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
@@ -145,8 +145,8 @@ router.get('/security/:id', (req, res) => {
         // pass data to handlebars template
 
         res.render('aSecurity', {
-            security
-            // loggedIn: req.session.loggedIn
+            security,
+            loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
@@ -190,7 +190,10 @@ router.get('/newthesis', (req, res) => {
         // serialize the data - what does this mean?
         const user = dbUserData.get({ plain: true });
         console.log(user);
-        res.render('newThesis', {user});
+        res.render('newThesis', {
+            user,
+            loggedIn: req.session.loggedIn
+        });
     })
     .catch(err => {
         console.log(err);
