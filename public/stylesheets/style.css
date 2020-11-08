@@ -23,8 +23,6 @@ section {
   border-radius: 10px;
 }
 
-
-
 ul {
   list-style-type: none;
 }
@@ -106,7 +104,7 @@ header {
 }
 
 .navbar{
-  background-color: #990000;
+  background-color: #001433;
   color: #ffffff;
 }
 
