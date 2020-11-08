@@ -6,12 +6,12 @@
   </div>
 
   <div class="row">
-    <div class="col-9">
+    <div class="col-lg-9">
       <h3 class="thesis_title">
         {{thesis.title}}
       </h3>
     </div>
-    <div class="col-3">
+    <div class="col-lg-3">
       <div class="meta">
         Posted by {{thesis.user.username}} on {{format_date thesis.createdAt}} | <a>{{thesis.comments.length}} comment(s)</a>
       </div>
@@ -30,10 +30,10 @@
       </div>
 
       <div class="row">
-        <div class="col-9">
+        <div class="col-md-9">
           <textarea id="comment-text" name="comment-text"></textarea>
         </div>
-        <div class="col-3 meta">
+        <div class="col-md-3 meta">
           <div class="row  comment-adds">
             <label class="meta comment-adds-item" for="comment-opinion">Opinion of Thesis:</label>
           </div>
