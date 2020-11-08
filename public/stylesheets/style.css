@@ -46,6 +46,7 @@ button:hover {
   background-color: #cce0ff;
   padding: 1%;
   border-radius: 10px;
+  margin-bottom: 1%;
 }
 
 .thesis {
@@ -62,7 +63,7 @@ button:hover {
   border-radius: 10px;
 }
 
-.thesis_title {
+.thesis-title {
   color: #001f4d;
 }
 
@@ -145,6 +146,9 @@ main {
   color: #3486eb;
 }
 
+.newticker {
+  margin: 1%;
+}
 
 /* ############################################### */
 /* Post = Main Security Display and Style */
