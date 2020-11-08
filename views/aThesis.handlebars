@@ -1,8 +1,9 @@
-<a href="/security/{{thesis.security_id}}">{{thesis.security_id}}</a>
-
-<img src="/dummy.png">
-
 <article class="thesis">
+  <div class="chart">
+    <a href="/security/{{thesis.security_id}}">{{thesis.security_id}}</a>
+    <img src="/dummy.png">
+  </div>
+  
   <div class="row">
     <div class="col-9">
       <h3 class="thesis_title">
@@ -32,18 +33,18 @@
           <textarea id="comment-text" name="comment-text"></textarea>
         </div>
         <div class="col-3 meta">
-          <div class="row">
-            <label class="meta" for="comment-opinion">Opinion of Thesis:</label>
+          <div class="row  comment-adds">
+            <label class="meta comment-adds-item" for="comment-opinion">Opinion of Thesis:</label>
           </div>
-          <div class="row">
-            <select id="comment-opinion" name="comment-opinion" required>
+          <div class="row comment-adds">
+            <select class="comment-adds-item" id="comment-opinion" name="comment-opinion" required>
               <option value="neutral">Neutral</option>
               <option value="support">Support</option>
               <option value="oppose">Oppose</option>
             </select>
           </div>
-          <div class="row"> 
-            <button type="submit">Add Comment</button>
+          <div class="row comment-adds"> 
+            <button class="comment-adds-item" type="submit">Add Comment</button>
           </div>
         </div>
       </div>

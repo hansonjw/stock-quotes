@@ -7,11 +7,12 @@ body, html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  margin-top: 2%;
 }
 
 a {
   text-decoration: none;
-  color: #000000;
+  /* color: #000000; */
   font-weight: bold;
   transition: color .1s;
 }
@@ -22,9 +23,7 @@ section {
   border-radius: 10px;
 }
 
-a:visited {
-  color: #1a0000;
-}
+
 
 ul {
   list-style-type: none;
@@ -45,18 +44,21 @@ button:hover {
   background-color: #000000;
 }
 
-.subhead {
-  font-size: 100%;
-  font-style: italic;
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
+.new-thesis{
+  background-color: #cce0ff;
+  padding: 1%;
+  border-radius: 10px;
 }
 
 .thesis {
   background-color: #cce0ff;
+  padding: 1%;
+  margin-bottom: 1%;
+  border-radius: 10px;
+}
+
+.thesis-group {
+  background-color: #80b3ff;
   padding: 1%;
   margin-bottom: 1%;
   border-radius: 10px;
@@ -71,9 +73,8 @@ button:hover {
   margin: 1%;
 }
 
-.post-list {
-  margin: 0;
-  padding: 0;
+.chart {
+  margin-bottom: 5%;
 }
 
 textarea, input {
@@ -89,37 +90,38 @@ textarea:focus, input:focus {
 
 textarea {
   min-width: 100%;
-  min-height: 100px;
+  min-height: 100%;
 }
 
 form label {
   display: block;
-}
-
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 0;
 }
 
 header {
-  border-bottom: 1px solid #660000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
 }
 
-header h1 {
-  font-size: 2em;
+.navbar{
+  background-color: #990000;
+  color: #ffffff;
 }
 
-.navbar{
-  background-color: #ffffcc;
-  color: #333300;
+.navbar .nav-item {
+  color: #ffffff;
+  padding: 10px;
+  display: inline;
+}
+
+.navbar a{
+  color: #ffffff;
+}
+
+.navbar .navbar-brand{
+  color: #ffffff;
 }
 
 main {
@@ -129,21 +131,46 @@ main {
 
 
 .btn-no-style {
+  text-align: center;
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #660000;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
-  margin-left: 16px;
 }
 
 .btn-no-style:hover {
   background: none;
   color: #3486eb;
+}
+
+
+/* ############################################### */
+/* Post = Main Security Display and Style */
+
+.post {
+  line-height: 150%;
+  background-color: #cce0ff;
+  margin-bottom: 2%;
+  padding:  1%;
+  border-radius: 10px;
+}
+
+.new-post-form input {
+  width: 300px;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+}
+
+.post span {
+  font-style: italic;
+  font-size: 90%;
+  color: #ff9999
 }
 
 .delete-post-btn {
@@ -154,13 +181,7 @@ main {
   background-color: #ff643d;
 }
 
-.post {
-  line-height: 150%;
-  background-color: #ff9999;
-  margin-bottom: 2%;
-  padding:  2%;
-  border-radius: 10px;
-}
+
 
 
 /* ############################################### */
@@ -203,13 +224,16 @@ footer {
   font-size: 110%;
 }
 
-.navitem { 
-  width: 400px;
-  height: 50px;
-  padding: 10px;
-  margin: 20px;
-  display: inline;
+.comment-adds{
+  margin: 5%;
 }
+
+.comment-adds-item {
+  width: 100%;
+  text-align: center;
+}
+
+
 
 img {
   display: block;
@@ -224,13 +248,7 @@ img {
 /* ############################################### */
 /* Not Sure if these are actually used anywhere... */
 
-.new-post-form input {
-  width: 300px;
-}
 
-.edit-post-form {
-  margin-bottom: 5%;
-}
 
 .blog-contents {
   font-size: 100%;
@@ -240,12 +258,6 @@ img {
   color: #660000;
 }
 
-.post span {
-  font-style: italic;
-  font-size: 90%;
-  color: #ff9999
-}
-
 .welcome {
   font-size: 80%;
 }
@@ -253,4 +265,13 @@ img {
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }

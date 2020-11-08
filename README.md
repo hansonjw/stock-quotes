@@ -13,8 +13,6 @@
   - Create an account
   - Post an investment thesis on individual stocks
   - Post comments and/or ratings on other posts
-  
-  This utilizes an external API to bring in data for a particular stock.
 
   >*Thesis: a statement or theory that is put forward as a premise to be maintained or proved.*
 
@@ -24,6 +22,7 @@
   * [How to Contibute:](#Contibute:)
   * [License Information:](#License:)
   * [Questions:](#Questions:)
+  * [Future Enhancements and Developement Opportunities:](#Future:)
   
   ## Database Design
   - *investments* table, Primary Key = ticker
@@ -52,6 +51,15 @@
   
   <a name="Questions:"></a>
   ## Questions:  
-  For questions, comments, suggestions, I can be reached at the following  
-  https://github.com/hansonjw  
+  For questions, comments, suggestions, we can be reached at the following  
+  https://github.com/hansonjw
   hansonjw@gmail.com
+  https://github.com/vconte41982
+  Veronica_conte@comcast.net
+  
+  <a name="Future:"></a>
+  ## Future Enhancements and Development Opportunities:
+  - Incorporate external APIs for stock/security/investment information and validation
+  - Add Revision capability such that Thesis's can evolve and update over time based on colaboration
+  - Track and maintain progress to identify credible investment advisors or star performers
+
