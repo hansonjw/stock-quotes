@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<nav class="navbar">
-    <a class="navbar-brand">Investment Ideas!</a>
-
-    <div class="nav-item"><a href="/">All Ideas</a></div>
-    {{#if loggedIn}}
-    <div class="nav-item"><a href="/newthesis">New Idea</a></div>
-    <div class="nav-item"><button id="logout" class="btn-no-style">logout</button></div>
-    {{else}}
-    <div class="nav-item"><a href="/login">login</a></div>
-    {{/if}}
-</nav>
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +10,20 @@
 </head>
 
 <body>
+  <header class="navbar fixed-top navbar-expand navbar-light flex-column flex-md-row bd-navbar">
+      <a class="navbar-brand">Investment Ideas!</a>
+
+      <div class="navbar-nav ml-md-auto">
+        <div class="nav-item"><a href="/">The Ideas</a></div>
+        {{#if loggedIn}}
+        <div class="nav-item"><a href="/newthesis">New Idea</a></div>
+        <div class="nav-item"><button id="logout" class="btn-no-style">logout</button></div>
+        {{else}}
+        <div class="nav-item"><a href="/login">Login / Create Account</a></div>
+        {{/if}}
+      </div>
+  </header>
+
   <div class="wrapper">
     <main>
       {{{ body }}}
