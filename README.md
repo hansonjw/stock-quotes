@@ -63,3 +63,8 @@
   - Add Revision capability such that Thesis's can evolve and update over time based on colaboration
   - Track and maintain progress to identify credible investment advisors or star performers
 
+### Screenshots
+
+![screenshot](/img/screenshot1.png)
+![screenshot](/img/screenshot2.png)
+![screenshot](/img/screenshot3.png)
