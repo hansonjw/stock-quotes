@@ -91,10 +91,8 @@ router.get('/thesis/:id', (req, res) => {
 
         // serialize the data - what does this mean?
         const thesis = dbThesisData.get({ plain: true });
-        console.log(thesis);
 
         // pass data to handlebars template
-
         res.render('aThesis', {
             thesis,
             loggedIn: req.session.loggedIn
@@ -160,8 +158,7 @@ router.get('/security/:id', (req, res) => {
 router.get('/newthesis', (req, res) => {
     User.findOne({
         where: {
-            // id: req.session.user_id
-            id: 3
+            id: req.session.user_id
         },
         attributes: [
             'id',
@@ -201,7 +198,16 @@ router.get('/newthesis', (req, res) => {
     })
 });
 
-// route 
+// render page tor entering a new security...
+router.get('/newsecurity', (req, res) => {
+    // if user is logged in redirect to main page
+    if (req.session.loggedIn) {
+      res.render('newSecurity', {loggedIn: req.session.loggedIn});
+      return;
+    }
+    // ...otherwise take then to the login page
+    res.render('login');
+});
 
 
 

@@ -39,4 +39,18 @@ router.get('/:id', (req, res) => {
 });
 
 
+router.post('/', (req, res) => {
+    console.log("in the post route for a new security");
+    Security.create({
+        ticker: req.body.ticker,
+        name: req.body.name
+    })
+    .then(dbSecurityData => res.json(dbSecurityData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
+
+
 module.exports = router;

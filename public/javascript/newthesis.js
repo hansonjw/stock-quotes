@@ -3,7 +3,9 @@ async function newFormHandler(event) {
   
     const title = document.querySelector('input[name="thesis-title"]').value;
     const thesis_text = document.querySelector('textarea[name="thesis-contents"]').value;
-    const security_id = document.querySelector('input[name="thesis-security"]').value;
+
+    const security_id = window.location.toString().split('/')[
+      window.location.toString().split('/').length - 1];
   
     const response = await fetch(`/api/thesis/`, {
       method: 'POST',

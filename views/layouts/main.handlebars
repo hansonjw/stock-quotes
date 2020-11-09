@@ -16,17 +16,18 @@
       <a class="navbar-brand" href="#"><img src="img/seed_stock.png"></a>
     </div>
 
-    <div class="container">
-      <div class="navbar-nav ml-md-auto">
-        <div class="nav-item"><a href="/">The Ideas</a></div>
-        {{#if loggedIn}}
-        <div class="nav-item"><a href="/newthesis">New Idea</a></div>
-        <div class="nav-item"><button id="logout" class="btn-no-style">logout</button></div>
-        {{else}}
-        <div class="nav-item"><a href="/login">Login / Create Account</a></div>
-        {{/if}}
+
+      <div class="container">
+        <div class="navbar-nav ml-md-auto">
+          <div class="nav-item"><a href="/">The Ideas</a></div>
+          {{#if loggedIn}}
+          <div class="nav-item"><a href="/newsecurity">New Security</a></div>
+          <div class="nav-item"><button id="logout" class="btn-no-style">logout</button></div>
+          {{else}}
+          <div class="nav-item"><a href="/login">Login / Create Account</a></div>
+          {{/if}}
+        </div>
       </div>
-    </div>
   </header>
 
   <div class="wrapper">
