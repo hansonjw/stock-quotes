@@ -68,6 +68,6 @@
 
 ### Screenshots
 
-![screenshot](.public/img/screenshot1.png)
-![screenshot](.public/img/screenshot2.png)
-![screenshot](.public/img/screenshot3.png)
+![screenshot](./public/img/screenshot1.png)
+![screenshot](./public/img/screenshot2.png)
+![screenshot](./public/img/screenshot3.png)
