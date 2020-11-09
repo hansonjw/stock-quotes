@@ -1,5 +1,8 @@
-# "Stock Quote"  
+# "SeedStocks Investment Ideas"  
   No license is applicable for this application
+
+  ## Website:
+  https://seedstocks.herokuapp.com/  
 
   ## Description:  
   This is a blog style investment research and collaboration platform.
@@ -65,6 +68,6 @@
 
 ### Screenshots
 
-![screenshot](/img/screenshot1.png)
-![screenshot](/img/screenshot2.png)
-![screenshot](/img/screenshot3.png)
+![screenshot](.public/img/screenshot1.png)
+![screenshot](.public/img/screenshot2.png)
+![screenshot](.public/img/screenshot3.png)
